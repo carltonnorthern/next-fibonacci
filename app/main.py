@@ -19,6 +19,6 @@ def next_fibonacci(n):
     while fib[-1] < n:
         fib.append(fib[-1] + fib[-2])
     if n in fib:
-        return {"result" : fib[len(fib)-1] + fib[len(fib)-2]}
+        return {"result" : fib[-1] + fib[-2]}
     else:
         return {"error" : "Not a fibonacci number"}
