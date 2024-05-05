@@ -3,6 +3,7 @@ version: '3.7'
 services:
   nginx:
     image: nginx:latest
+    restart: always
     ports:
       - "80:80"
     volumes:
@@ -11,5 +12,6 @@ services:
   uvicorn:
     build: .
     image: next-fibonacci:latest
+    restart: always
     ports:
       - "8000:8000"
