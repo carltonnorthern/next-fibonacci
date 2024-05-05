@@ -10,31 +10,33 @@ This is a FastAPI python project with Uvicorn application server. It's packaged 
 
 To run locally for development, pip install the requirements.txt:
 
-```
+```bash
 pip install --no-cache-dir --upgrade -r requirements.txt
 ```
 
 Run with:
 
-```
+```bash
 uvicorn app.main:app --reload
 ```
 
 Access the running instance with http://localhost:8000/next-fibonacci?number=1
 
 To run with docker-compose:
-```
+
+```bash
 docker compose up -d
 ```
 
 Access the running instance with http://localhost/next-fibonacci?number=1
 
 ## Reverse Proxy
+
 The Nginx container exposes port 80 and passes to port 8000. It does so through the nginx.conf file which is bind mounted into the container.
 
 The nginx.conf file is able to reference the uvicorn service with some Docker dns magic.
 
-```
+```apache
 # nginx.conf
 server {
   listen 80;
