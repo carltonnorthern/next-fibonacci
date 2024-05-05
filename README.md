@@ -46,3 +46,7 @@ server {
   }
 }
 ```
+
+## Deploy to AWS EC2
+
+The [next-fibonacci-automation](https://github.com/carltonnorthern/next-fibonacci-automation) repository contains the Terraform code necessary to deploy to an AWS EC2 instance.
