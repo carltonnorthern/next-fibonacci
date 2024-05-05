@@ -9,7 +9,7 @@ app = FastAPI()
 def read_root():
     return {"Hello": "World"}
 
-
+# Will result in http://127.0.0.1:8000/next-fibonacci?number=x
 @app.get("/next-fibonacci")
 def read_item(number: int):
     return next_fibonacci(number)
